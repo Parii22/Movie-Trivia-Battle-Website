@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Trivia Battle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="toast"></div>
+
+<nav>
+<strong>🎬 Movie Trivia</strong>
+<a href="index.html"><button>Home</button></a>
+<a href="play.html"><button>Play</button></a>
+<a href="leaderboard.html"><button class="active">Leaderboard</button></a>
+<a href="forum.html"><button>Forum</button></a>
+</nav>
+
+<div id="scores" class="page show">
+
+<h2>Leaderboard</h2>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Score</th>
+<th>Genre</th>
+<th>Acc</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody id="lb"></tbody>
+
+</table>
+
+<button class="clear-btn" onclick="clearScores()">Clear scores</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

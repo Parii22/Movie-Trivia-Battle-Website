@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Trivia Battle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="toast"></div>
+
+<nav>
+<strong>🎬 Movie Trivia</strong>
+<a href="index.html"><button>Home</button></a>
+<a href="play.html"><button>Play</button></a>
+<a href="leaderboard.html"><button>Leaderboard</button></a>
+<a href="forum.html"><button class="active">Forum</button></a>
+</nav>
+
+<div id="forum" class="page show">
+
+<h2>Forum</h2>
+<p>Share tips and movie hot takes.</p>
+
+<div class="compose-box">
+
+<textarea id="fbody" placeholder="What's on your mind?"></textarea>
+
+<div class="row">
+<input type="text" id="fname" placeholder="Your name...">
+<button class="btn slim" onclick="addPost()">Post</button>
+</div>
+
+</div>
+
+<div class="posts" id="posts"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

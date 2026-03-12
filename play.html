@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Trivia Battle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="toast"></div>
+
+<nav>
+<strong>🎬 Movie Trivia</strong>
+<a href="index.html"><button>Home</button></a>
+<a href="play.html"><button class="active">Play</button></a>
+<a href="leaderboard.html"><button>Leaderboard</button></a>
+<a href="forum.html"><button>Forum</button></a>
+</nav>
+
+<div id="play" class="page show">
+<!-- Setup -->
+<div id="setup">
+
+<h2>New Battle</h2>
+
+<label>Your Name</label>
+<input type="text" id="pname" placeholder="Enter your name..." maxlength="24">
+
+<label>Genre</label>
+
+<div class="genre-grid">
+<button class="active" data-g="Action">Action</button>
+<button data-g="Comedy">Comedy</button>
+<button data-g="Sci-Fi">Sci-Fi</button>
+<button data-g="Horror">Horror</button>
+<button data-g="Romance">Romance</button>
+<button data-g="Classic">Classic</button>
+</div>
+
+<button class="btn" onclick="startGame()">Start Battle</button>
+
+</div>
+
+
+<!-- Battle -->
+
+<div id="battle" style="display:none">
+
+<div class="info-bar">
+<div><span>Player: </span><strong id="b-name"></strong></div>
+<div><span>Round: </span><strong id="b-round"></strong></div>
+<div><span>Score: </span><strong id="b-score" class="score-highlight"></strong></div>
+</div>
+
+<div class="timer-row">
+<small id="b-genre"></small>
+<span id="timer-num">15</span>
+</div>
+
+<div class="timer-bar">
+<div class="timer-fill" id="tfill" style="width:100%"></div>
+</div>
+
+<div class="question-box">
+<small id="q-num"></small>
+<p id="q-text"></p>
+</div>
+
+<div class="choices" id="choices"></div>
+
+</div>
+
+
+<!-- Results -->
+
+<div id="results" style="display:none">
+
+<div class="result-center">
+<div class="result-badge" id="r-badge">🏆</div>
+<div class="big" id="r-score"></div>
+<div class="rank" id="r-rank"></div>
+</div>
+
+<div class="stats-row">
+
+<div class="stat">
+<div class="n" id="r-correct"></div>
+<div class="l">Correct</div>
+</div>
+
+<div class="stat">
+<div class="n" id="r-wrong"></div>
+<div class="l">Wrong</div>
+</div>
+
+<div class="stat">
+<div class="n" id="r-acc"></div>
+<div class="l">Accuracy</div>
+</div>
+
+</div>
+
+<div class="row">
+<input type="text" id="sname" placeholder="Name to save...">
+<button class="btn slim" onclick="saveScore()">Save</button>
+</div>
+
+<div class="row">
+<button class="btn outline" onclick="restart()">Play Again</button>
+<a href="scores.html">
+<button class="btn outline">Leaderboard</button>
+</a>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
